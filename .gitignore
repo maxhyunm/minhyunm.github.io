@@ -67,3 +67,21 @@ yarn-error.log
 .pnp.js
 # Yarn Integrity file
 .yarn-integrity
+
+./content/blog/hello-world/
+./content/blog/my-second-post/
+./content/blog/new-beginnings/
+README.md
+
+.idea/
+.gitignore
+.prettierignore
+.prettierrc
+package.json
+package-lock.json
+gatsby-browser.js
+gatsby-config.js
+gatsby-node.js
+
+static/
+src/

@@ -1,6 +1,6 @@
 ---
-title: TDD Study : week 0
-date: "2022-04-29"
+title: TDD Study - week 0
+date: "2022-04-28"
 ---
 
 #### 유용한 TDD 개념

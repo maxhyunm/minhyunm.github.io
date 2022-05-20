@@ -1,22 +1,24 @@
 ---
-title: TDD Study : week 2
+title: TDD Study - week 2
 date: "2022-05-03"
 ---
 
 
 ### 부제 : 이건... 뭐야...? 도자기 깨는 장인이야...?
-<br>
+
 참고서적 : `클린 코드를 위한 테스트 주도 개발(해리 J.W. 퍼시벌 저)`<br>
 환경 : `Mac(M1)`, `Python 3.8.3`,  `Django 4.0.4`,  `Selenium 4.1.3`,  `Firefox`<br>
+
 ### Chapter 03. 단위 테스트를 이용한 간단한 홈페이지 테스트<br>
-<br>
+
 앞서 진행한 내용에 좀 더 살을 붙여보도록 하겠다.<br>
 지난 기능 테스트에 작성했듯이 타이틀에 'To-Do'라는 문구를 넣어주는 내용도 아마... 추가되겠지?<br>
 그리고 무엇보다 이번 챕터에서는 앱 단위로 개발 테스트를 진행한다.<br>
 즉 단위 테스트(Unit test)를 작성한다!<br>
 이쯤에서 잠깐... 단위 테스트와 기능 테스트의 정확한 차이점이 무엇인지를 짚고 넘어가 보도록 하자.<br>
-<br>
+
 #### 단위 테스트 vs 기능 테스트<br>
+
 * 기능 테스트 : 사용자 관점에서 애플리케이션 외부를 테스트<br>
 * 단위 테스트 : 프로그래머 관점에서 애플리케이션 내부를 테스트<br>
 
@@ -43,7 +45,8 @@ python manage.py startapp lists
 
 그 다음은 단위 테스트를 작성할 차례다.<br>
 startapp 명령어를 통해 자동 생성된 lists 앱 내부의 파일 중에서 tests.py를 눌러본다. 물론 지금은 django.test에서 TestCase를 임포트한 내용 말고는 아무 것도 적혀있지 않다. 이 TestCase는 앞서 사용했던 unittest.TestCase의 확장 버전이다. 이 파일에 고의적인 실패 테스트를 만들어 본다.<br>
- ```python
+
+```python
 from django.test import TestCase
 
 
@@ -52,12 +55,16 @@ class SmokeTest(TestCase):
     def test_bad_maths(self):
         self.assertEqual(1 + 1, 3)
 ```
+
 내용을 보아하니 1+1과 3이 동일한 값인지를 확인하는 테스트인 듯하다.<br>
 이제 아래의 명령어를 입력하면 테스트를 진행한다.
+
 ```python
 python manage.py test
 ```
+
 1+1이 3일리 없으니 이 테스트는 반드시 오류를 리턴하게 되어 있다.<br>
+
 ```command
 Creating test database for alias 'default'...
 System check identified no issues (0 silenced).
@@ -78,6 +85,7 @@ FAILED (failures=1)
 Destroying test database for alias 'default'...
 
 ```
+
 굳<br>
 <br>
 그럼 이제 앱 내용을 작성해야 한다.<br>
@@ -89,6 +97,7 @@ Destroying test database for alias 'default'...
 와 같으므로 우리가 테스트해야 할 내용은 해당 url의 해석이 제대로 이루어지는지 & 올바른 html를 반환하여 기능테스트를 통과하는지 의 두 가지이다.<br>
 <br>
 이에 맞는 테스트코드를 작성해 본다.<br>
+
 ```python
 from django.urls import resolve
 from django.test import TestCase
@@ -101,6 +110,7 @@ class SmokeTest(TestCase):
         found = resolve('/')
         self.assertEqual(found.func, home_page)
 ```
+
 여기서 첫 번째 줄은 from django.core.urlresolvers import resolve 라고 되어있었는데<br>
 이게 장고 1.x 버전대 코드라 수정을 해주었다.<br>
 이 내용은 대략 url로 '/'가 호출되면 resolve를 실행하여 home_page라는 함수를 호출하라는 내용이다.<br>
@@ -112,15 +122,18 @@ class SmokeTest(TestCase):
 벌써부터 속이 터진다. 하지만 별 수 없지.<br>
 <br>
 먼저 시급한 문제인 home_page 함수의 부재를 처리해본다.
+
 ```python
 from django.shortcuts import render
 
 # Create your views here.
 home_page = None
 ```
+
 앗 예상치 못했던 진행이다.<br>
 TDD란 이렇게 언 발에 오줌 누기 형식으로 진행되는 것이란 말인가<br>
 아무튼 다시 테스트를 돌리니 당연하지만 오류 메시지가 바뀌어 있다.
+
 ```command
 Creating test database for alias 'default'...
 System check identified no issues (0 silenced).
@@ -147,9 +160,11 @@ Ran 1 test in 0.001s
 FAILED (errors=1)
 Destroying test database for alias 'default'...
 ```
+
 해당 url 패턴이 지정되어 있지 않기 때문에 오류가 난 것으로 확인된다.<br>
 그렇겠지 urls를 안 건드렸으니까...<br>
 그래서 이번에는 urls를 수습하러 떠난다.<br>
+
 ```python
 from django.contrib import admin
 from django.urls import path
@@ -159,20 +174,24 @@ urlpatterns = [
     path(r'^$', 'superlists.views.home', name='home'),
 ]
 ```
+
 이번에도 변함없이 책에는 1.x 버전 장고에 맞춘 코드예제가 나와 있었는데 예를 들면<br>
 include, url, patterns 같은 것들...<br>
 include는 2버전대에서도 종종 써봤지만 아무튼<br>
 patterns는 생략해도 제대로 작동하도록 바뀌었으므로 제거하고, url은 path로 대치하여 코드를 작성했다.<br>
 대충 url로 빈 문자열이 전달될 경우 home이라는 view 함수를 찾아가도록 만드는 내용이다.<br>
 이대로 테스트를 돌리면 이제 또 에러 메시지가 바뀌어 있다.<br>
+
 ```command
 TypeError: view must be a callable or a list/tuple in the case of include().
 ```
+
 이번 에러메시지 너무 길어서 마지막 줄만 긁어옴; 이번은 타입에러다.<br>
 근데 책에 나온 에러는 import error였기 때문에... 뭔가 버전차이가 또 있겠거니<br>
 일단 내 에러메시지의 원인은 urls에서 view 연결하는 부분인 것으로 보여서<br>
 책에 나온 import error랑 같이 뚝딱뚝딱 또 고쳐봤다.<br>
 (정규식이 사라진 이유는 버전차이 때문인지 그걸로 계속 오류가 나서...ㅠ)<br>
+
 ```python
 from django.contrib import admin
 from django.urls import path
@@ -183,7 +202,9 @@ urlpatterns = [
     path('', home_page, name='home'),
 ]
 ```
+
 home_page가 계속 None 상태면 또 오류가 날 것이 분명하므로 이번에는 이쪽도 바꿔준다.<br>
+
 ```python
 from django.shortcuts import render
 
@@ -191,6 +212,7 @@ from django.shortcuts import render
 def home_page():
     pass
 ```
+
 그리고 드디어 테스트를 통과했다.<br>
 
 ```command
@@ -203,10 +225,12 @@ Ran 1 test in 0.000s
 OK
 Destroying test database for alias 'default'...
 ```
+
 <br>
 이제 url을 통한 접근에 문제가 없음을 확인했으니 이번엔 응답을 위한 단위 테스트를 작성할 차례다.<br>
 이번 테스트는 HTML 형식의 실제 응답을 반환하는 함수를 작성해야 한다.<br>
 lists/tests.py 내용을 아래와 같이 고친다.<br>
+
 ```python
 from django.urls import resolve
 from django.test import TestCase
@@ -228,6 +252,7 @@ class HomePageTest(TestCase):
         self.assertIn(b'<title>To-Do lists</title>', response.content)
         self.assertTrue(response.content.endswith(b'</html>'))
 ```
+
 <br>
 SmokeTest로 되어있던 클래스명을 HomePageTest로 변경하고, 임포트에 HttpRequest를 추가했다.<br>
 그리고 test_home_page_returns_correct_html이라는 함수를 추가했는데, 이 함수는
@@ -241,9 +266,11 @@ SmokeTest로 되어있던 클래스명을 HomePageTest로 변경하고, 임포�
 더 상세하고, 실제 코드에 가깝다. 즉 프로그래머의 입장에서 진행해야 한다.<br>
 <br>
 아무튼 위의 테스트를 실행하면 아래의 에러가 뜬다.<br>
+
 ```command
 TypeError: home_page() takes 0 positional arguments but 1 was given
 ```
+
 이제 코드의 에러를 한 줄 한 줄 해결해 나갈 차례다.<br>
 오류를 수정하기 위한 최소한의 코드를 변경한 뒤 테스트를 재실행하기를 반복해 나가야 한다.<br>
 책에서는 이 부분을 단위테스트 코드 주기라고 표시했는데,<br>
@@ -253,18 +280,21 @@ TypeError: home_page() takes 0 positional arguments but 1 was given
 아무튼 시키는 대로 코드 수정을 시작해보도록 한다.<br><br>
 
 코드 수정 : home_page()에 파라미터로 request를 추가한다
+
 ```python
 def home_page(request):
     pass
 ```
 
 테스트 결과
+
 ```command
 self.assertTrue(response.content.startswith(b'<html>'))
 AttributeError: 'NoneType' object has no attribute 'content'
 ```
 
 코드 수정 : django.http.HttpResponse를 임포트하여 리턴
+
 ```python
 from django.http import HttpResponse
 
@@ -273,45 +303,53 @@ def home_page(request):
 ```
 
 테스트 결과
+
 ```command
 self.assertTrue(response.content.startswith(b'<html>'))
 AssertionError: False is not true
 ```
 
 코드 수정 : 리턴 내용에 html 코드 추가
+
 ```python
 def home_page(request):
     return HttpResponse('<html><title>To-Do lists</title>')
 ```
 
 테스트 결과
+
 ```command
 self.assertTrue(response.content.endswith(b'</html>'))
 AssertionError: False is not true
 ```
 
 코드 수정 : 리턴 코드에 `</html>` 추가
+
 ```python
 def home_page(request):
     return HttpResponse('<html><title>To-Do lists</title></html>')
 ```
 
 테스트 결과
+
 ```command
 Ran 2 tests in 0.001s
 
 OK
 Destroying test database for alias 'default'...
 ```
+
 <br>
 야호!<br>
 왜인지 모르겠지만 책보다 일찍 테스트를 통과했는데 어디서 잘못 썼는지 모르겠고 의도는 파악했으므로 다 된 것으로 여기겠음.<br>
 자 그럼 기존에 작성했던 functional_tests.py를 다시 실행해보도록 하겠다.<br>
+
 ```python
 python functional_tests.py
 ```
 
 테스트 결과
+
 ```command
 F
 ======================================================================
@@ -327,10 +365,13 @@ Ran 1 test in 1.282s
 
 FAILED (failures=1)
 ```
+
 성공! Failed로 뜨는 부분은 브라우저 종료를 위해 심어둔 강제 실패때문에 그렇다.<br>
 이 과정에 놀랍게도 또 한 차례 오류를 겪었는데 서버가 내려가있는 걸 까먹고 진행해서...<br>
 다들 런서버를 까먹지 맙시다!<br>
 <br>
+
+
 ### Chapter 04. 왜 테스트를 하는 것인가?<br>
 챕터 4의 소제목이 갑자기 뜬금없이 원론적인 질문인 이유는 아마도<br>
 이 쯤에서 한 줄씩 마이크로 수정을 거치는 방식에 회의감을 느끼고 TDD 때려칠까 고민하는 나 같은 사람들을 위해(역시 나만 그런 게 아니었지) 저자가 친절한 설명을 곁들였기 때문일 것이다(이 내용에 약 3p를 할애하심).<br>
@@ -406,7 +447,9 @@ class NewVisitorTest(unittest.TestCase):
 
 [...]
 ```
+
 위의 내용을 테스트해 보면 h1을 찾지 못해서 아래와 같은 오류가 뜬다.<br>
+
 ```command
 selenium.common.exceptions.NoSuchElementException: Message: Unable to locate element: h1
 Stacktrace:
@@ -414,6 +457,7 @@ WebDriverError@chrome://remote/content/shared/webdriver/Errors.jsm:183:5
 NoSuchElementError@chrome://remote/content/shared/webdriver/Errors.jsm:395:5
 element.find/</<@chrome://remote/content/marionette/element.js:300:16
 ```
+
 여기까지 왔으면 테스트는 제대로 작성한 것이고 이에 맞춰 코드를 수정해야 한다.<br>
 그런데 이쯤에서 떠올려야 할 규칙사항 : <b>상수는 테스트하지 마라</b><br>
 이것은 단위 테스트를 할 때의 일반적인 규칙 중 하나라고 한다. 다들 나만 빼고 언제 그런 규칙을... 정한 거야...?<br>
@@ -427,12 +471,15 @@ element.find/</<@chrome://remote/content/marionette/element.js:300:16
 우리의 코드는 알다시피 테스트를 통과했다. 따라서 작업내용을 표시할 템플릿 파일을 만들러 간다.<br>
 <br>
 지금까지 작업한 lists 앱 폴더 하위에 templates 폴더를 생성하고, home.html 파일을 만든다.<br>
+
 ```html
 <html>
     <title>To-Do lists</title>
 </html>
 ```
+
 그리고 views.py 파일에도 렌더 페이지 부분을 추가해 준다.
+
 ```python
 from django.shortcuts import render
 from django.http import HttpResponse
@@ -441,7 +488,9 @@ from django.http import HttpResponse
 def home_page(request):
     return render(request, 'home.html')
 ```
+
 그리고 `python manage.py test`로 확인해 본다.
+
 ```command
 ======================================================================
 ERROR: test_home_page_returns_correct_html (lists.tests.HomePageTest)
@@ -454,10 +503,12 @@ django.template.exceptions.TemplateDoesNotExist: home.html
 Ran 2 tests in 0.002s
 
 ```
+
 중간에 상세한 오류는 생략하고... 대략적으로 템플릿을 못 찾는다는 의미임<br>
 왜 못찾느냐 그것은 우리가 settings.py를 손대지 않았기 때문이다.<br>
 장고 좀 건드려 본 사람들은 모두 아는 국룰 제1항 그것은 INSTALLED_APPS에 앱이름 추가하기...<br>
 이 책은 이제까지 현란한 한 줄 코드 수정을 선보이며 나의 혼을 쏙 빼놓아서 앱 추가조차 까먹게 만들고는... 이제 와서 앱을 추가 안 했잖니^^라며... 나를 놀린 것이다... 농락당한 기분인걸...? 
+
 ```python
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -469,16 +520,20 @@ INSTALLED_APPS = [
     'lists',
 ]
 ```
+
 옜소<br>
 이제 됐겠지?
+
 ```command
 ----------------------------------------------------------------------
 Ran 2 tests in 0.001s
 
 OK
 ```
+
 됐당<br>
 다음은 상수를 테스트하지 않고 템플릿을 이용해서 렌더링하는 것을 테스트하도록 수정해주어야 하...는데 장고의 render_to_string을 쓰면 쉽다고 한다. lists/tests.py 파일을 다음과 같이 수정한다.
+
 ```python
 from django.urls import resolve
 from django.test import TestCase
@@ -499,8 +554,10 @@ class HomePageTest(TestCase):
         expected_html = render_to_string('home.html')
         self.assertEqual(response.content.decode(), expected_html)
 ```
+
 리스폰스 콘텐트의 바이트 데이터를 .decode() 함수를 써서 유니코드로 변환하고, 문자열 대 문자열로 비교를 거친다. 여기서 중요한 점은 상수가 아닌 구현 결과물을 비교하는 것이다.<br>
 단위 테스트 수정이 끝났다면 이제 다시 home.html 템플릿에 부족한 내용을 추가하러 간다.
+
 ```html
 <html>
     <head>
@@ -511,13 +568,17 @@ class HomePageTest(TestCase):
     </body>
 </html>
 ```
+
 기본적인 구조 추가와 더불어 h1 태그를 추가해 주었다. 이제 기능 테스트를 다시 돌려 보면
+
 ```command
 selenium.common.exceptions.NoSuchElementException: Message: 
 Unable to locate element: [id="id_new_item"]
 ```
+
 그려 고마우이<br>
 다음 내용을 수정한다.
+
 ```html
 <html>
     <head>
@@ -529,7 +590,9 @@ Unable to locate element: [id="id_new_item"]
     </body>
 </html>
 ```
+
 다시 테스트
+
 ```command
 Traceback (most recent call last):
   File "functional_tests.py", line 29, 
@@ -538,8 +601,10 @@ Traceback (most recent call last):
 AssertionError: '' != '작업 아이템 입력'
 + 작업 아이템 입력
 ```
+
 아니 망할 거 알면서 테스트 돌려야 하는 과정 너무 스트레스다<br>
 아무튼 다음 내용을 고치러 간다.
+
 ```html
 <html>
     <head>
@@ -551,14 +616,18 @@ AssertionError: '' != '작업 아이템 입력'
     </body>
 </html>
 ```
+
 테스트 결과
+
 ```command
 
 selenium.common.exceptions.NoSuchElementException: 
 Message: Unable to locate element: [id="id_list_table"]
 ```
+
 그려 고마우이...<br>
 이제 테이블을 추가한다.
+
 ```html
 <html>
     <head>
@@ -572,15 +641,19 @@ Message: Unable to locate element: [id="id_list_table"]
     </body>
 </html>
 ```
+
 테스트 결과
+
 ```command
 Traceback (most recent call last):
   File "functional_tests.py", line 43, in test_can_start_a_list_and_retrieve_it_later
     self.assertTrue(
 AssertionError: False is not true
 ```
+
 으잉 갑자기 이건 뭐지<br>
 다행히 책에도 똑같은 에러가 나고 있다. 오류 내용을 명확히 보기 위해 기능 테스트 파일의 assertTrue 함수에 실패 메시지를 정의해 준다.
+
 ```python
 [...]
 rows = table.find_elements(by=By.TAG_NAME, value='tr')
@@ -590,10 +663,13 @@ rows = table.find_elements(by=By.TAG_NAME, value='tr')
         )
 [...]
 ```
+
 다시 테스트
+
 ```command
 AssertionError: False is not true : 신규 작업이 테이블에 표시되지 않는다
 ```
+
 야쓰<br>
 이 내용은 폼 제출 처리를 구현해야 하기 때문에 다음 챕터로 넘어간다.<br>
 길었던 3-4챕터가 이렇게 마무리되고... 나의 하루도... 마무리된다... 이제 잘 수 있어...<br>

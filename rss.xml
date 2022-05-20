@@ -1,10 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[.]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 20 May 2022 02:34:47 GMT</lastBuildDate><item><title><![CDATA[TDD Study - week 3]]></title><description><![CDATA[부제 : 와 벌써부터 너무 길다 때려칠까? 아냐 그래도…]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io/tdd_03/</link><guid isPermaLink="false">https://gatsbystarterblogsource.gatsbyjs.io/tdd_03/</guid><pubDate>Tue, 17 May 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;부제 : 와 벌써부터 너무 길다 때려칠까? 아냐 그래도 1부까진 해야 아니 근데&lt;/h3&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[.]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 20 May 2022 02:59:21 GMT</lastBuildDate><item><title><![CDATA[TDD Study - week 3]]></title><description><![CDATA[부제 : 와 벌써부터 너무 길다 때려칠까? 아냐 그래도 1부까진 해야 아니 근데 참고서적 : 
+환경 : , ,  ,  ,   Chapter 05. 사용자 입력 저장하기 마치 폼 입력만 처리하는 것처럼 앙큼한 제목을 하고 있지만 30p…]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io/tdd_03/</link><guid isPermaLink="false">https://gatsbystarterblogsource.gatsbyjs.io/tdd_03/</guid><pubDate>Tue, 17 May 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;부제 : 와 벌써부터 너무 길다 때려칠까? 아냐 그래도 1부까진 해야 아니 근데&lt;/h3&gt;
 &lt;br&gt;
-참고서적 : `클린 코드를 위한 테스트 주도 개발(해리 J.W. 퍼시벌 저)`&lt;br&gt;
-환경 : `Mac(M1)`, `Python 3.8.3`,  `Django 4.0.4`,  `Selenium 4.1.3`,  `Firefox`&lt;br&gt;
-### Chapter 05. 사용자 입력 저장하기&lt;br&gt;
-마치 폼 입력만 처리하는 것처럼 앙큼한 제목을 하고 있지만 30p에 달하는 길이의 챕터 5...&lt;br&gt;
-더 끔찍한 건 챕터 6은 더 길다는 것이다... ㅎ...&lt;br&gt;&lt;br&gt;
+&lt;p&gt;참고서적 : &lt;code class=&quot;language-text&quot;&gt;클린 코드를 위한 테스트 주도 개발(해리 J.W. 퍼시벌 저)&lt;/code&gt;&lt;br&gt;
+환경 : &lt;code class=&quot;language-text&quot;&gt;Mac(M1)&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;Python 3.8.3&lt;/code&gt;,  &lt;code class=&quot;language-text&quot;&gt;Django 4.0.4&lt;/code&gt;,  &lt;code class=&quot;language-text&quot;&gt;Selenium 4.1.3&lt;/code&gt;,  &lt;code class=&quot;language-text&quot;&gt;Firefox&lt;/code&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h3&gt;Chapter 05. 사용자 입력 저장하기&lt;br&gt;&lt;/h3&gt;
+&lt;p&gt;마치 폼 입력만 처리하는 것처럼 앙큼한 제목을 하고 있지만 30p에 달하는 길이의 챕터 5…&lt;br&gt;
+더 끔찍한 건 챕터 6은 더 길다는 것이다… ㅎ…&lt;br&gt;&lt;br&gt;&lt;/p&gt;
 &lt;p&gt;이번에 작업할 내용은 사용자가 입력한 작업 아이템을 서버로 보내고 이를 저장 -&gt; 다시 사용자에게 보여주는 시스템이다. 이번에도 역시 한 번에 한 가지씩 진행하며, 테스트에 필요한 최소한의 기능만 구현한다. 이 과정에서 머리도 쓰지 말고 그냥 그대로 하나씩 따라하라고 대놓고 적혀있다. 정말 이대로 괜찮은지 싶지만 테스트염소 님이 그렇게 하란다니까 별 수 없지. 근데 왜 염소인지? 공부가 하기 싫으니 쓸데 없는 것만 궁금함. 분명히 별 의미 없겠지 파이썬이 몬티파이썬의 파이썬인 것처럼…&lt;br&gt;&lt;br&gt;&lt;/p&gt;
 &lt;p&gt;아무튼 그렇다고 하니까 + 내용이 부연설명 추가하며 정리하기엔 너무 길고 나는 너무 지쳤기 때문에&lt;br&gt;
 이번 챕터는 전보다 더 코드작성+테스트결과에만 집중해서 정리해보도록 하겠음.&lt;br&gt;
@@ -122,21 +123,21 @@ lists/views.py를 다시 수정한다.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;self&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;assertIn&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;1: 공작깃털 사기&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;row&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;text &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; row &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; rows&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;그리고 lists/templates/home.html도 임시적으로 아래와 같이 수정한다.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;html&quot;&gt;&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;tr&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;td&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;1: {/{ new_item_text }}&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;td&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;tr&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;당연하게도 나의 에러는 개선이 되지 않았음… 떼잉&lt;br&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[TDD Study - week 2]]></title><description><![CDATA[…]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io/tdd_02/</link><guid isPermaLink="false">https://gatsbystarterblogsource.gatsbyjs.io/tdd_02/</guid><pubDate>Tue, 03 May 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;부제 : 이건… 뭐야…? 도자기 깨는 장인이야…?&lt;/h3&gt;
-&lt;br&gt;
-참고서적 : `클린 코드를 위한 테스트 주도 개발(해리 J.W. 퍼시벌 저)`&lt;br&gt;
-환경 : `Mac(M1)`, `Python 3.8.3`,  `Django 4.0.4`,  `Selenium 4.1.3`,  `Firefox`&lt;br&gt;
-### Chapter 03. 단위 테스트를 이용한 간단한 홈페이지 테스트&lt;br&gt;
-&lt;br&gt;
-앞서 진행한 내용에 좀 더 살을 붙여보도록 하겠다.&lt;br&gt;
-지난 기능 테스트에 작성했듯이 타이틀에 &apos;To-Do&apos;라는 문구를 넣어주는 내용도 아마... 추가되겠지?&lt;br&gt;
+&lt;p&gt;당연하게도 나의 에러는 개선이 되지 않았음… 떼잉&lt;br&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[TDD Study - week 2]]></title><description><![CDATA[부제 : 이건… 뭐야…? 도자기 깨는 장인이야…? 참고서적 : 
+환경 : , ,  ,  ,   Chapter 0…]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io/tdd_02/</link><guid isPermaLink="false">https://gatsbystarterblogsource.gatsbyjs.io/tdd_02/</guid><pubDate>Tue, 03 May 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;부제 : 이건… 뭐야…? 도자기 깨는 장인이야…?&lt;/h3&gt;
+&lt;p&gt;참고서적 : &lt;code class=&quot;language-text&quot;&gt;클린 코드를 위한 테스트 주도 개발(해리 J.W. 퍼시벌 저)&lt;/code&gt;&lt;br&gt;
+환경 : &lt;code class=&quot;language-text&quot;&gt;Mac(M1)&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;Python 3.8.3&lt;/code&gt;,  &lt;code class=&quot;language-text&quot;&gt;Django 4.0.4&lt;/code&gt;,  &lt;code class=&quot;language-text&quot;&gt;Selenium 4.1.3&lt;/code&gt;,  &lt;code class=&quot;language-text&quot;&gt;Firefox&lt;/code&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h3&gt;Chapter 03. 단위 테스트를 이용한 간단한 홈페이지 테스트&lt;br&gt;&lt;/h3&gt;
+&lt;p&gt;앞서 진행한 내용에 좀 더 살을 붙여보도록 하겠다.&lt;br&gt;
+지난 기능 테스트에 작성했듯이 타이틀에 ‘To-Do’라는 문구를 넣어주는 내용도 아마… 추가되겠지?&lt;br&gt;
 그리고 무엇보다 이번 챕터에서는 앱 단위로 개발 테스트를 진행한다.&lt;br&gt;
 즉 단위 테스트(Unit test)를 작성한다!&lt;br&gt;
-이쯤에서 잠깐... 단위 테스트와 기능 테스트의 정확한 차이점이 무엇인지를 짚고 넘어가 보도록 하자.&lt;br&gt;
-&lt;br&gt;
-#### 단위 테스트 vs 기능 테스트&lt;br&gt;
-* 기능 테스트 : 사용자 관점에서 애플리케이션 외부를 테스트&lt;br&gt;
-* 단위 테스트 : 프로그래머 관점에서 애플리케이션 내부를 테스트&lt;br&gt;
+이쯤에서 잠깐… 단위 테스트와 기능 테스트의 정확한 차이점이 무엇인지를 짚고 넘어가 보도록 하자.&lt;br&gt;&lt;/p&gt;
+&lt;h4&gt;단위 테스트 vs 기능 테스트&lt;br&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;기능 테스트 : 사용자 관점에서 애플리케이션 외부를 테스트&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;단위 테스트 : 프로그래머 관점에서 애플리케이션 내부를 테스트&lt;br&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;어떤 시점에서 테스트를 진행하느냐에 따라 기능/단위 테스트로 나뉘고,&lt;br&gt;
 때문에 기능 테스트와 단위 테스트는 테스트 스토리부터 방식, 테스트 대상이 차이가 날 수밖에 없다.&lt;br&gt;
 이전까지 이 둘의 개념이 좀 모호했는데 이렇게 보니 굉장히 확연히 다른 개념이었던 것이다…&lt;br&gt;
@@ -161,8 +162,8 @@ startapp 명령어를 통해 자동 생성된 lists 앱 내부의 파일 중에�
 
 &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;SmokeTest&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;TestCase&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
 
-   &lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;test_bad_maths&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;self&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
-       self&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;assertEqual&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;test_bad_maths&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;self&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        self&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;assertEqual&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;내용을 보아하니 1+1과 3이 동일한 값인지를 확인하는 테스트인 듯하다.&lt;br&gt;
 이제 아래의 명령어를 입력하면 테스트를 진행한다.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;python manage&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;py test&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -298,37 +299,39 @@ Destroying test database for alias &amp;#39;default&amp;#39;...&lt;/code&gt;&lt;
 이제 url을 통한 접근에 문제가 없음을 확인했으니 이번엔 응답을 위한 단위 테스트를 작성할 차례다.&lt;br&gt;
 이번 테스트는 HTML 형식의 실제 응답을 반환하는 함수를 작성해야 한다.&lt;br&gt;
 lists/tests.py 내용을 아래와 같이 고친다.&lt;br&gt;
-```python
-from django.urls import resolve
-from django.test import TestCase
-from django.http import HttpRequest
-&lt;p&gt;from lists.views import home_page&lt;/p&gt;
-&lt;p&gt;class HomePageTest(TestCase):&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;def test_root_url_resolves_to_home_page_view(self):
-    found = resolve(&apos;/&apos;)
-    self.assertEqual(found.func, home_page)
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; django&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;urls &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; resolve
+&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; django&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;test &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; TestCase
+&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; django&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;http &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; HttpRequest
 
-def test_home_page_returns_correct_html(self):
-    request = HttpRequest()
-    response = home_page(request)
-    self.assertTrue(response.content.startswith(b&apos;&amp;lt;html&gt;&apos;))
-    self.assertIn(b&apos;&amp;lt;title&gt;To-Do lists&amp;lt;/title&gt;&apos;, response.content)
-    self.assertTrue(response.content.endswith(b&apos;&amp;lt;/html&gt;&apos;))&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;br&gt;
-SmokeTest로 되어있던 클래스명을 HomePageTest로 변경하고, 임포트에 HttpRequest를 추가했다.&amp;lt;br&gt;
+&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; lists&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;views &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; home_page
+
+
+&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;HomePageTest&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;TestCase&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;test_root_url_resolves_to_home_page_view&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;self&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        found &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; resolve&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;/&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        self&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;assertEqual&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;found&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;func&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; home_page&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;test_home_page_returns_correct_html&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;self&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        request &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; HttpRequest&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        response &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; home_page&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;request&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        self&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;assertTrue&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;response&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;content&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;startswith&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;b&apos;&amp;lt;html&gt;&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        self&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;assertIn&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;b&apos;&amp;lt;title&gt;To-Do lists&amp;lt;/title&gt;&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; response&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;content&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        self&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;assertTrue&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;response&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;content&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;endswith&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;b&apos;&amp;lt;/html&gt;&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;br&gt;
+SmokeTest로 되어있던 클래스명을 HomePageTest로 변경하고, 임포트에 HttpRequest를 추가했다.&lt;br&gt;
 그리고 test_home_page_returns_correct_html이라는 함수를 추가했는데, 이 함수는
-
-1. HttpRequest 객체를 생성하여 사용자가 어떤 요청을 브라우저에 보냈는지 확인&amp;lt;br&gt;
-2. 요청을 home_page 뷰에 전달하여 응답을 취득(HttpResponse 인스턴스)&amp;lt;br&gt;
-3. 응답 내용이 특정 html 코드를 가지고 있는지 확인(title 내용에 To-Do lists가 들어있는지 여부 포함)
-
-의 내용을 담고 있다.&amp;lt;br&gt;
-앞서 정리한 대로 단위 테스트는 기능 테스트에 의해 파생된 하위 개념이기 때문에&amp;lt;br&gt;
-더 상세하고, 실제 코드에 가깝다. 즉 프로그래머의 입장에서 진행해야 한다.&amp;lt;br&gt;
-&amp;lt;br&gt;
-아무튼 위의 테스트를 실행하면 아래의 에러가 뜬다.&amp;lt;br&gt;
-```command
-TypeError: home_page() takes 0 positional arguments but 1 was given&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;HttpRequest 객체를 생성하여 사용자가 어떤 요청을 브라우저에 보냈는지 확인&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;요청을 home_page 뷰에 전달하여 응답을 취득(HttpResponse 인스턴스)&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;응답 내용이 특정 html 코드를 가지고 있는지 확인(title 내용에 To-Do lists가 들어있는지 여부 포함)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;의 내용을 담고 있다.&lt;br&gt;
+앞서 정리한 대로 단위 테스트는 기능 테스트에 의해 파생된 하위 개념이기 때문에&lt;br&gt;
+더 상세하고, 실제 코드에 가깝다. 즉 프로그래머의 입장에서 진행해야 한다.&lt;br&gt;
+&lt;br&gt;
+아무튼 위의 테스트를 실행하면 아래의 에러가 뜬다.&lt;br&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;command&quot;&gt;&lt;pre class=&quot;language-command&quot;&gt;&lt;code class=&quot;language-command&quot;&gt;TypeError: home_page() takes 0 positional arguments but 1 was given&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;이제 코드의 에러를 한 줄 한 줄 해결해 나갈 차례다.&lt;br&gt;
 오류를 수정하기 위한 최소한의 코드를 변경한 뒤 테스트를 재실행하기를 반복해 나가야 한다.&lt;br&gt;
 책에서는 이 부분을 단위테스트 코드 주기라고 표시했는데,&lt;br&gt;
@@ -368,9 +371,7 @@ Destroying test database for alias &amp;#39;default&amp;#39;...&lt;/code&gt;&lt;
 야호!&lt;br&gt;
 왜인지 모르겠지만 책보다 일찍 테스트를 통과했는데 어디서 잘못 썼는지 모르겠고 의도는 파악했으므로 다 된 것으로 여기겠음.&lt;br&gt;
 자 그럼 기존에 작성했던 functional_tests.py를 다시 실행해보도록 하겠다.&lt;br&gt;
-```python
-python functional_tests.py
-```
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;python functional_tests&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;py&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;테스트 결과&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;command&quot;&gt;&lt;pre class=&quot;language-command&quot;&gt;&lt;code class=&quot;language-command&quot;&gt;F
 ======================================================================
@@ -617,25 +618,26 @@ rows &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; table&lt;span c
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;command&quot;&gt;&lt;pre class=&quot;language-command&quot;&gt;&lt;code class=&quot;language-command&quot;&gt;AssertionError: False is not true : 신규 작업이 테이블에 표시되지 않는다&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;야쓰&lt;br&gt;
 이 내용은 폼 제출 처리를 구현해야 하기 때문에 다음 챕터로 넘어간다.&lt;br&gt;
-길었던 3-4챕터가 이렇게 마무리되고… 나의 하루도… 마무리된다… 이제 잘 수 있어…&lt;br&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[TDD Study - week 1]]></title><description><![CDATA[…]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io/tdd_01/</link><guid isPermaLink="false">https://gatsbystarterblogsource.gatsbyjs.io/tdd_01/</guid><pubDate>Fri, 29 Apr 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;부제 : 아니 그게 아니고 나는 파이어폭스를 안 써서 그래서 그런 거거든&lt;/h3&gt;
-&lt;br&gt;
-참고서적 : `클린 코드를 위한 테스트 주도 개발(해리 J.W. 퍼시벌 저)`&lt;br&gt;
-환경 : `Mac(M1)`, `Python 3.8.3`,  `Django 4.0.4`,  `Selenium 4.1.3`&lt;br&gt;
-&lt;br&gt;
-각 챕터에 필요한 라이브러리들은 미리 설치를 하고 진행했다.&lt;br&gt;
+길었던 3-4챕터가 이렇게 마무리되고… 나의 하루도… 마무리된다… 이제 잘 수 있어…&lt;br&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[TDD Study - week 0]]></title><description><![CDATA[유용한 TDD 개념 사용자 스토리(User story) : 사용자 관점에서 어떻게 애플리케이션이 동작해야 하는지 기술한 것. 기능 테스트 구조화를 위해 사용 예측된 실패(Expected failure…]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io/tdd_00/</link><guid isPermaLink="false">https://gatsbystarterblogsource.gatsbyjs.io/tdd_00/</guid><pubDate>Fri, 29 Apr 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h4&gt;유용한 TDD 개념&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;사용자 스토리(User story) : 사용자 관점에서 어떻게 애플리케이션이 동작해야 하는지 기술한 것. 기능 테스트 구조화를 위해 사용&lt;/li&gt;
+&lt;li&gt;예측된 실패(Expected failure) : 의도적으로 구현한 테스트 실패&lt;/li&gt;
+&lt;li&gt;기능 테스트 : 사용자 관점에서 애플리케이션 외부를 테스트&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;단위 테스트 : 프로그래머 관점에서 애플리케이션 내부를 테스트&lt;br&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[TDD Study - week 1]]></title><description><![CDATA[…]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io/tdd_01/</link><guid isPermaLink="false">https://gatsbystarterblogsource.gatsbyjs.io/tdd_01/</guid><pubDate>Fri, 29 Apr 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;부제 : 아니 그게 아니고 나는 파이어폭스를 안 써서 그래서 그런 거거든&lt;/h3&gt;
+&lt;p&gt;참고서적 : &lt;code class=&quot;language-text&quot;&gt;클린 코드를 위한 테스트 주도 개발(해리 J.W. 퍼시벌 저)&lt;/code&gt;&lt;br&gt;
+환경 : &lt;code class=&quot;language-text&quot;&gt;Mac(M1)&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;Python 3.8.3&lt;/code&gt;,  &lt;code class=&quot;language-text&quot;&gt;Django 4.0.4&lt;/code&gt;,  &lt;code class=&quot;language-text&quot;&gt;Selenium 4.1.3&lt;/code&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;각 챕터에 필요한 라이브러리들은 미리 설치를 하고 진행했다.&lt;br&gt;
 셀레늄의 경우 버전 정보가 따로 보이지 않아서 그냥 최신 버전으로 설치해서 활용했고&lt;br&gt;
 파이썬이랑 장고 버전은 책과 달리 제멋대로인데,&lt;br&gt;
 파이썬의 경우 M1에서 3.7 이하 특정 버전들은 활용하기 매우 번거롭고 귀찮기 때문에 대충 3.8 버전대로 진행했고&lt;br&gt;
-그렇다보니 Django 1.7이 파이썬 3.6 이후로는 호환이 안 되어서(HTMLParseError가 남) 이것도 그냥 최신 버전으로 깔았다.&lt;br&gt;
-&lt;br&gt;
-### TDD(Test-Driven Development)&lt;br&gt;
-TDD 즉 테스트 주도 개발이란 간단히 말해 어떤 내용을 개발하기에 앞서 이를 위한 테스트 코드를 먼저 작성하고, 이 내용을 기반으로 개발을 해 나가는 방식을 의미한다.&lt;br&gt;
-개발 속도가 느려진다는 단점 &amp; 필요한 기능에 대한 깔끔한 개발을 할 수 있다는 장점이 있다.&lt;br&gt;
-&lt;br&gt;
-### Chapter 01. 기능 테스트를 이용한 Django 설치&lt;br&gt;
-&lt;br&gt;
-모든 것을 테스트부터 거치는 TDD 방식에 걸맞게, 책에서는 설치 직후 장고의 runserver 정상 실행 여부부터 테스트할 수 있도록 예시 코드를 제공한다.&lt;br&gt;
-해당 코드는 아래와 같으며, 과제를 위한 프로젝트 폴더 안에  functional_tests.py 라는 이름으로 저장한다. (코드 실행 전에 selenium 설치가 필요하다.)&lt;br&gt;
+그렇다보니 Django 1.7이 파이썬 3.6 이후로는 호환이 안 되어서(HTMLParseError가 남) 이것도 그냥 최신 버전으로 깔았다.&lt;br&gt;&lt;/p&gt;
+&lt;h3&gt;TDD(Test-Driven Development)&lt;br&gt;&lt;/h3&gt;
+&lt;p&gt;TDD 즉 테스트 주도 개발이란 간단히 말해 어떤 내용을 개발하기에 앞서 이를 위한 테스트 코드를 먼저 작성하고, 이 내용을 기반으로 개발을 해 나가는 방식을 의미한다.&lt;br&gt;
+개발 속도가 느려진다는 단점 &amp;#x26; 필요한 기능에 대한 깔끔한 개발을 할 수 있다는 장점이 있다.&lt;br&gt;&lt;/p&gt;
+&lt;h3&gt;Chapter 01. 기능 테스트를 이용한 Django 설치&lt;br&gt;&lt;/h3&gt;
+&lt;p&gt;모든 것을 테스트부터 거치는 TDD 방식에 걸맞게, 책에서는 설치 직후 장고의 runserver 정상 실행 여부부터 테스트할 수 있도록 예시 코드를 제공한다.&lt;br&gt;
+해당 코드는 아래와 같으며, 과제를 위한 프로젝트 폴더 안에  functional_tests.py 라는 이름으로 저장한다. (코드 실행 전에 selenium 설치가 필요하다.)&lt;br&gt;&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; selenium &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; webdriver
 
 browser &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; webdriver&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Firefox&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
@@ -671,9 +673,9 @@ capability provided, and no binary flag set on the command line&lt;/code&gt;&lt;
 &lt;p&gt;이런걸 순차적으로 생각해주심 됨. 마지막거는 좀 화질 깨질 때까지 클로즈업한 느낌으로 떠올려주심 좋겠음&lt;br&gt;&lt;br&gt;
 파이어폭스가 아예 안 깔려있었던 것이다. 바보 아님?&lt;br&gt;
 하여튼 개발은 나 바보 아님? 이랑 나 좀 천재인듯 을 반복하는 과정이기 때문에… 오늘치 바보 아님? 은 파이어폭스인 걸로…&lt;br&gt;&lt;br&gt;
-그래서&lt;br&gt;
-환경 : &lt;code class=&quot;language-text&quot;&gt;Mac(M1)&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;Python 3.8.3&lt;/code&gt;,  &lt;code class=&quot;language-text&quot;&gt;Django 4.0.4&lt;/code&gt;,  &lt;code class=&quot;language-text&quot;&gt;Selenium 4.1.3&lt;/code&gt;,  &lt;code class=&quot;language-text&quot;&gt;Firefox&lt;/code&gt; &amp;#x3C;-NEW!&lt;br&gt;&lt;br&gt;
-파이어폭스를 받고 났더니 매우 멀쩡히 정상적으로 드디어 ‘연결할 수 없음’이 떴다!&lt;br&gt;
+그래서&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;환경 : &lt;code class=&quot;language-text&quot;&gt;Mac(M1)&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;Python 3.8.3&lt;/code&gt;,  &lt;code class=&quot;language-text&quot;&gt;Django 4.0.4&lt;/code&gt;,  &lt;code class=&quot;language-text&quot;&gt;Selenium 4.1.3&lt;/code&gt;,  &lt;code class=&quot;language-text&quot;&gt;Firefox&lt;/code&gt; &amp;#x3C;-NEW!&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;파이어폭스를 받고 났더니 매우 멀쩡히 정상적으로 드디어 ‘연결할 수 없음’이 떴다!&lt;br&gt;
 여전히 이미지 첨부가 귀찮기 때문에 대충… 연결 못한 브라우저 짤을 상상해주시면 됨&lt;br&gt;
 물론 셀레늄에서 파이어폭스 대신 다른 브라우저를 써도 된다.(크롬 쓰려면 chromedriver를 받아야 한다는 듯)&lt;br&gt;
 나는 정직하게 책을 따라하고 싶었기 때문에 그냥 파이어폭스를 깔고 끝냈다.&lt;br&gt;&lt;br&gt;&lt;/p&gt;
@@ -733,8 +735,7 @@ FT만으로도 요구사항과 특징을 논의할 수 있어야 한다는데, T
 
  &lt;span class=&quot;token comment&quot;&gt;# 이용을 마친다&lt;/span&gt;
 
- browser&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;quit&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ browser&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;quit&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;추가가 완료되었으면 runserver를 통해 서버를 시작한 뒤 테스트를 실행한다.&lt;br&gt;
 위의 내용을 보면 assertion이 타이틀에서 ‘To-Do’를 찾도록 수정되었는데, 현재 해당 내용은 개발되어 있지 않으므로 오류가 날 것이다.&lt;br&gt;
 여기서는 오류 메시지를 좀 더 명확히 표시하기 위해  실제 표시된 타이틀을 함께 출력하도록 추가했다.&lt;br&gt;&lt;br&gt;
@@ -800,10 +801,4 @@ AssertionError: &amp;#39;To-Do&amp;#39; not found in &amp;#39;The install worked
 ----------------------------------------------------------------------
 Ran 1 test in 2.095s
 
-FAILED (failures=1)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[TDD Study - week 0]]></title><description><![CDATA[유용한 TDD 개념 사용자 스토리(User story) : 사용자 관점에서 어떻게 애플리케이션이 동작해야 하는지 기술한 것. 기능 테스트 구조화를 위해 사용 예측된 실패(Expected failure…]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io/tdd_00/</link><guid isPermaLink="false">https://gatsbystarterblogsource.gatsbyjs.io/tdd_00/</guid><pubDate>Fri, 29 Apr 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h4&gt;유용한 TDD 개념&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;사용자 스토리(User story) : 사용자 관점에서 어떻게 애플리케이션이 동작해야 하는지 기술한 것. 기능 테스트 구조화를 위해 사용&lt;/li&gt;
-&lt;li&gt;예측된 실패(Expected failure) : 의도적으로 구현한 테스트 실패&lt;/li&gt;
-&lt;li&gt;기능 테스트 : 사용자 관점에서 애플리케이션 외부를 테스트&lt;br&gt;&lt;/li&gt;
-&lt;li&gt;단위 테스트 : 프로그래머 관점에서 애플리케이션 내부를 테스트&lt;br&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item></channel></rss>
+FAILED (failures=1)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item></channel></rss>
